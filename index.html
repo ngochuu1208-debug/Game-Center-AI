@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>HỮU'S GAME CENTER</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,500;0,600;0,700;1,700&family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- HEADER / NAVIGATION -->
+  <header class="header">
+    <div class="logo" onclick="switchView('home')">
+      <span class="logo-text">HỮU'S</span>
+      <span class="logo-sub">GAME CENTER</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#intro" onclick="switchView('home')">Giới thiệu</a>
+      <a href="#games" onclick="switchView('home')">Trò chơi</a>
+      <a href="#about" onclick="switchView('home')">Về chúng tôi</a>
+    </nav>
+    <div class="audio-toggle" id="audioToggleBtn" title="Bật/Tắt âm thanh">
+      <span id="audioIcon">🔊</span>
+    </div>
+  </header>
+
+  <!-- HOME VIEW -->
+  <main id="homeView" class="view-section active">
+    <!-- HERO / INTRODUCTION -->
+    <section id="intro" class="hero-section">
+      <div class="glow-orb orb-1"></div>
+      <div class="glow-orb orb-2"></div>
+      <div class="hero-content">
+        <div class="badge">NỀN TẢNG GAMING CAO CẤP</div>
+        <h1 class="hero-title">HỮU'S <span class="neon-text-blue">GAME</span> <span class="neon-text-green">CENTER</span></h1>
+        <p class="hero-desc">Khám phá vũ trụ trò chơi Web Arcade thế hệ mới. Đắm chìm trong các thử thách kinh điển với giao diện Neon Cyberpunk mượt mà trên mọi thiết bị.</p>
+        <div class="hero-buttons">
+          <a href="#games" class="btn btn-primary btn-glow-green">Chơi ngay</a>
+          <a href="#about" class="btn btn-secondary">Tìm hiểu thêm</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GAMES CATALOG -->
+    <section id="games" class="games-section">
+      <div class="section-header">
+        <h2 class="section-title">DANH SÁCH <span class="neon-text-orange">TRÒ CHƠI</span></h2>
+        <p class="section-subtitle">Lựa chọn đấu trường yêu thích của bạn và ghi danh bảng vàng</p>
+      </div>
+
+      <div class="game-grid">
+        <!-- Game 1: Snake -->
+        <div class="game-card card-snake">
+          <div class="card-glow"></div>
+          <div class="card-thumb">
+            <div class="thumb-badge badge-green">10 BẢN ĐỒ</div>
+            <div class="thumb-icon">🐍</div>
+          </div>
+          <div class="card-info">
+            <h3 class="card-title">Rắn Săn Mồi</h3>
+            <span class="card-genre">Arcade Cổ Điển • Đột Phá Neon</span>
+            <p class="card-desc">Thử thách phản xạ với 10 bản đồ mê cung chướng ngại vật sắc màu neon. Mục tiêu 100 điểm để chiến thắng vinh quang!</p>
+            <div class="card-meta">
+              <span>Độ khó: Tăng dần</span>
+              <span>100 Điểm Win</span>
+            </div>
+            <button class="btn btn-play btn-glow-green" onclick="openGame('snake')">Chơi Ngay</button>
+          </div>
+        </div>
+
+        <!-- Game 2: Fruit Slide -->
+        <div class="game-card card-fruit">
+          <div class="card-glow"></div>
+          <div class="card-thumb">
+            <div class="thumb-badge badge-orange">CẢM ỨNG & CHUỘT</div>
+            <div class="thumb-icon">🍉</div>
+          </div>
+          <div class="card-info">
+            <h3 class="card-title">Chém Hoa Quả</h3>
+            <span class="card-genre">Hành Động • Vuốt Kiếm Blade</span>
+            <p class="card-desc">Chém ngọt mọi loại hoa quả bay lượn! Cẩn thận với những quả bom ranh ma và không được để lọt quả rơi. 3 Mạng, đạt 100 điểm là thắng!</p>
+            <div class="card-meta">
+              <span>Thử thách: 3 Mạng</span>
+              <span>Combo Chém Cực Đã</span>
+            </div>
+            <button class="btn btn-play btn-glow-orange" onclick="openGame('fruit')">Chơi Ngay</button>
+          </div>
+        </div>
+
+        <!-- Game 3: Brick Breaker -->
+        <div class="game-card card-brick">
+          <div class="card-glow"></div>
+          <div class="card-thumb">
+            <div class="thumb-badge badge-blue">10 MAP • 5 CẤP ĐỘ</div>
+            <div class="thumb-icon">🧱</div>
+          </div>
+          <div class="card-info">
+            <h3 class="card-title">Phá Gạch Siêu Cấp</h3>
+            <span class="card-genre">Chiến Thuật • Vật Lý Quỹ Đạo</span>
+            <p class="card-desc">Số lượng gạch cực dày đặc, mê cung tường xoắn ốc & chắn ngang kịch tính! Kích hoạt hiệu ứng Explosion, Double và Triple x6 bóng!</p>
+            <div class="card-meta">
+              <span>Thời gian: 7 Phút/Map</span>
+              <span>Power-up Siêu Độc</span>
+            </div>
+            <button class="btn btn-play btn-glow-blue" onclick="openGame('brick')">Chơi Ngay</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT US -->
+    <section id="about" class="about-section">
+      <div class="about-card">
+        <h2 class="about-title">VỀ CHÚNG TÔI</h2>
+        <div class="about-slogan">"Chơi game vui • Chơi có trách nhiệm"</div>
+        <p class="about-text">
+          <strong>HỮU'S GAME CENTER</strong> là một dự án nền tảng web gaming sáng tạo, được xây dựng với mục tiêu mang đến không gian giải trí thuần túy, nhanh chóng, mượt mà và trực quan ngay trên trình duyệt mà không cần cài đặt. Hệ thống được tối ưu hóa đồng bộ trên cả máy tính để bàn và điện thoại di động với công nghệ đồ họa Canvas & âm thanh kỹ thuật số tương tác cao.
+        </p>
+        <div class="tech-stack-tags">
+          <span class="tag">HTML5 Canvas</span>
+          <span class="tag">Modern Vanilla JS</span>
+          <span class="tag">Web Audio API</span>
+          <span class="tag">Mobile Touch Responsive</span>
+          <span class="tag">Zero External Dependencies</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2026 <strong>HỮU'S GAME CENTER</strong>. Được thiết kế và xây dựng với tâm huyết & phong cách Neon hiện đại.</p>
+    </footer>
+  </main>
+
+  <!-- ==================== GAME CONTAINERS ==================== -->
+
+  <!-- GAME 1: SNAKE -->
+  <section id="gameSnakeView" class="view-section game-room">
+    <div class="room-topbar">
+      <button class="btn btn-back" onclick="switchView('home')">← Trở về Game Center</button>
+      <h2 class="room-title neon-text-green">RẮN SĂN MỒI NEON</h2>
+      <div class="room-actions">
+        <button class="btn btn-sm btn-outline" onclick="snakeOpenMapSelect()">Chọn Bản Đồ</button>
+        <button class="btn btn-sm btn-outline" onclick="snakeRestart()">Chơi Lại</button>
+      </div>
+    </div>
+
+    <!-- Map Selection Modal for Snake -->
+    <div id="snakeMapModal" class="modal-backdrop">
+      <div class="modal-box">
+        <h3 class="modal-title">CHỌN BẢN ĐỒ (1 - 10)</h3>
+        <p class="modal-desc">Độ khó và sắc màu tường neon tăng dần. Bạn có thể chọn tự do bất kỳ map nào!</p>
+        <div class="map-grid-selector" id="snakeMapGrid">
+          <!-- 10 Maps injected by JS -->
+        </div>
+        <button class="btn btn-secondary mt-15" onclick="snakeCloseMapModal()">Đóng</button>
+      </div>
+    </div>
+
+    <!-- Game HUD -->
+    <div class="game-hud">
+      <div class="hud-item"><span class="hud-label">Bản đồ:</span> <span id="snakeHudMap" class="hud-val">1 (Cơ Bản)</span></div>
+      <div class="hud-item"><span class="hud-label">Điểm số:</span> <span id="snakeHudScore" class="hud-val neon-text-green">0</span> / 100</div>
+      <div class="hud-item"><span class="hud-label">Mục tiêu:</span> <span class="hud-val">100 điểm để THẮNG</span></div>
+    </div>
+
+    <div class="canvas-container">
+      <canvas id="snakeCanvas" width="600" height="600"></canvas>
+      
+      <!-- Overlay Messages -->
+      <div id="snakeOverlay" class="canvas-overlay">
+        <div class="overlay-card">
+          <h2 id="snakeOverlayTitle" class="overlay-title">RẮN SĂN MỒI</h2>
+          <p id="snakeOverlayMsg" class="overlay-msg">Dùng 4 phím mũi tên trên PC hoặc D-pad trên điện thoại. Ăn táo đạt 100 điểm!</p>
+          <button id="snakeStartBtn" class="btn btn-primary btn-glow-green" onclick="snakeStartGame()">BẮT ĐẦU CHƠI</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Virtual D-Pad -->
+    <div class="mobile-dpad" id="snakeDpad">
+      <button class="dbtn dbtn-up" data-dir="UP">▲</button>
+      <div class="dpad-middle">
+        <button class="dbtn dbtn-left" data-dir="LEFT">◀</button>
+        <div class="dbtn-center">●</div>
+        <button class="dbtn dbtn-right" data-dir="RIGHT">▶</button>
+      </div>
+      <button class="dbtn dbtn-down" data-dir="DOWN">▼</button>
+    </div>
+  </section>
+
+  <!-- GAME 2: FRUIT SLIDE -->
+  <section id="gameFruitView" class="view-section game-room">
+    <div class="room-topbar">
+      <button class="btn btn-back" onclick="switchView('home')">← Trở về Game Center</button>
+      <h2 class="room-title neon-text-orange">CHÉM HOA QUẢ BLADE</h2>
+      <div class="room-actions">
+        <button class="btn btn-sm btn-outline" onclick="fruitRestart()">Chơi Lại</button>
+      </div>
+    </div>
+
+    <!-- Game HUD -->
+    <div class="game-hud">
+      <div class="hud-item"><span class="hud-label">Điểm số:</span> <span id="fruitHudScore" class="hud-val neon-text-orange">0</span> / 100</div>
+      <div class="hud-item"><span class="hud-label">Mạng sống:</span> <span id="fruitHudLives" class="hud-val">❤️❤️❤️</span></div>
+      <div class="hud-item"><span class="hud-label">Cảnh báo:</span> <span class="hud-val text-red">Bom xuất hiện từ 25đ!</span></div>
+    </div>
+
+    <div class="canvas-container">
+      <canvas id="fruitCanvas" width="800" height="550"></canvas>
+
+      <!-- Overlay Messages -->
+      <div id="fruitOverlay" class="canvas-overlay">
+        <div class="overlay-card">
+          <h2 id="fruitOverlayTitle" class="overlay-title">CHÉM HOA QUẢ</h2>
+          <p id="fruitOverlayMsg" class="overlay-msg">Kéo chuột hoặc vuốt ngón tay để chém hoa quả. Đừng chém bom và đừng để lọt hoa quả rơi! Đạt 100 điểm để chiến thắng!</p>
+          <button id="fruitStartBtn" class="btn btn-primary btn-glow-orange" onclick="fruitStartGame()">BẮT ĐẦU CHƠI</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME 3: BRICK BREAKER -->
+  <section id="gameBrickView" class="view-section game-room">
+    <div class="room-topbar">
+      <button class="btn btn-back" onclick="switchView('home')">← Trở về Game Center</button>
+      <h2 class="room-title neon-text-blue">PHÁ GẠCH SIÊU CẤP</h2>
+      <div class="room-actions">
+        <button class="btn btn-sm btn-outline" onclick="brickOpenMapModal()">Chọn Bản Đồ</button>
+        <button class="btn btn-sm btn-outline" id="brickPauseBtn" onclick="brickTogglePause()">Tạm Dừng</button>
+        <button class="btn btn-sm btn-outline" onclick="brickRestartCurrentMap()">Chơi Lại</button>
+      </div>
+    </div>
+
+    <!-- Map Selection Modal for Brick -->
+    <div id="brickMapModal" class="modal-backdrop">
+      <div class="modal-box modal-lg">
+        <h3 class="modal-title">CHỌN BẢN ĐỒ PHÁ GẠCH (10 BẢN ĐỒ - 5 CẤP ĐỘ)</h3>
+        <p class="modal-desc">Khám phá cấu trúc tường xoắn ốc & chắn ngang độc đáo. Tự do lựa chọn bất kỳ bản đồ nào!</p>
+        <div class="brick-map-grid" id="brickMapGrid">
+          <!-- 10 Maps injected by JS -->
+        </div>
+        <button class="btn btn-secondary mt-15" onclick="brickCloseMapModal()">Đóng</button>
+      </div>
+    </div>
+
+    <!-- Game HUD -->
+    <div class="game-hud">
+      <div class="hud-item"><span class="hud-label">Map:</span> <span id="brickHudMap" class="hud-val neon-text-blue">1 (Cấp 1-A)</span></div>
+      <div class="hud-item"><span class="hud-label">Mạng:</span> <span id="brickHudLives" class="hud-val">❤️❤️❤️</span></div>
+      <div class="hud-item"><span class="hud-label">Thời gian:</span> <span id="brickHudTimer" class="hud-val neon-text-green">07:00</span></div>
+      <div class="hud-item"><span class="hud-label">Gạch còn lại:</span> <span id="brickHudRemaining" class="hud-val neon-text-orange">0</span></div>
+    </div>
+
+    <!-- Active Power-ups Bar -->
+    <div class="powerup-status-bar" id="brickPowerupBar">
+      <span class="p-badge" id="pBadgeExplosion" style="display:none;">💥 EXPLOSION NỔ 3 Ô</span>
+      <span class="p-badge" id="pBadgeDouble" style="display:none;">⚡ DOUBLE (x2 BÓNG): <span id="pTimeDouble">10s</span></span>
+      <span class="p-badge" id="pBadgeTriple" style="display:none;">🔥 TRIPLE (x3 BÓNG): <span id="pTimeTriple">10s</span></span>
+      <span class="p-badge" id="pBadgeCombo" style="display:none;">👑 SIÊU COMBO x6 BÓNG!</span>
+    </div>
+
+    <div class="canvas-container">
+      <canvas id="brickCanvas" width="800" height="580"></canvas>
+
+      <!-- Overlay Messages -->
+      <div id="brickOverlay" class="canvas-overlay">
+        <div class="overlay-card">
+          <h2 id="brickOverlayTitle" class="overlay-title">PHÁ GẠCH SIÊU CẤP</h2>
+          <p id="brickOverlayMsg" class="overlay-msg">Điều khiển thanh đỡ phá vỡ toàn bộ gạch mục tiêu trong thời gian tối đa 7 phút. Nhặt các hiệu ứng Nổ, Double và Triple!</p>
+          <button id="brickStartBtn" class="btn btn-primary btn-glow-blue" onclick="brickStartGame()">BẮT ĐẦU CHƠI</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Audio System Scripts & Game Logic -->
+  <script src="js/sound.js"></script>
+  <script src="js/snake.js"></script>
+  <script src="js/fruit.js"></script>
+  <script src="js/brick.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
